@@ -1,13 +1,15 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
+import { SocketContextProvider } from "./context/SocketContext";
 import { Post } from "./component/post";
 
 function App() {
   return (
-    <div className="App">
-      <Post />
-    </div>
+    <SocketContextProvider>
+      <div className="App">
+        <Post />
+      </div>
+    </SocketContextProvider>
   );
 }
 
